@@ -2,139 +2,114 @@
 <html>
 <title>RSS Team 12</title>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=dsevice-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="img/ruby.png" type="image/png">
 
 <body>
-<!-- If you change something in the Navbar you have to change it on each page (sit on top) -->
-<!-- MAKE SURE YOU GET THE RELATIVE PATHS RIGHT FOR THE NAV BAR!!!!-->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">RSS Team 12</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="labs/" class="w3-bar-item w3-button"><i class="fa fa-folder"></i>Labs</a>
-      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="w3-bar-item w3-button"><i class="fa fa-camera"></i>Videos</a>
-      <a href="https://github.com/mit-rss" class="w3-bar-item w3-button"><i class="fa fa-github-square"></i>Github</a>
+<!-- Repeated header on each page-->
+<div class="navcontainer">
+  <div class="navbar">
+    <a class="team-name" href="#home">RSS Team 12</a>
+    <a class="menu"><i class="fa fa-bars"></i></a>
+    <div class="links">
+      <a href="#home"><i class="fa fa-home"></i>Home</a>
+      <a href="labs/"><i class="fa fa-folder"></i>Labs</a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-video-camera"></i>Videos</a>
+      <a href="https://github.com/rss2025-12"><i class="fa fa-github-square"></i>Github</a>
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
   </div>
+
+  <nav class="sidebar">
+    <a href="#home"><i class="fa fa-home"></i>Home</a>
+    <a href="labs/"><i class="fa fa-folder"></i>Labs</a>
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="fa fa-camera"></i>Videos</a>
+    <a href="https://github.com/rss2025-12"><i class="fa fa-github-square"></i>Github</a>
+    <a class="close-sidebar"><i class="fa fa-times-circle-o"></i> Close</a>
+  </nav>
 </div>
 
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close X</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-  <a href="labs/" onclick="w3_close()" class="w3-bar-item w3-button">Labs</a>
-  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" onclick="w3_close()" class="w3-bar-item w3-button">Videos</a>
-  <a href="https://github.com/mit-rss" onclick="w3_close()" class="w3-bar-item w3-button">Github</a>
-</nav>
-<!-- End of repeated content on each page-->
-
-
-<!-- Header with full-height image -->
-<header class="title_img w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-bottommiddle w3-text-white w3-center">
-    <h1>Team 12!</h1>
-    <p><a href="https://youtu.be/xLZU6TcSmRo" style="width:100%" class="w3-button w3-white w3-opacity w3-hover-opacity-off">
-        Innovation starts somewhere, so why not let it start here?
-    </a></p>
-  </div>
+<header class="title" id="home">
+  <h1>Team 12</h1>
+  <canvas id="canvas"></canvas>
 </header>
+<!-- End of repeated header on each page-->
 
-<div class="w3-container w3-white" style="padding:5% 5%">
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/wall_e.jfif">
-      <h4>Adan Abu Naaj</h4>
+<!-- Team members -->
+<div class="team_container">
+  <div class="team_member">
+      <img src="img/adan.png">
+      <h4 style="padding-top: 5%">Adan</h4>
+      <h4>Abu Naaj</h4>
       <p>adann@mit.edu</p>
-      <p>These are some template bios; fill this in for each of your team members!
+      <p>Junior. 6-3.
       </p>
   </div>
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/r2.jpg">
-      <h4>Dylan Gaillard</h4>
+  <div class="team_member">
+      <img src="img/dylan.png">
+      <h4 style="padding-top: 5%">Dylan</h4>
+      <h4>Gaillard</h4>
       <p>dylang@mit.edu</p>
-      <p>These are some template bios; fill this in for each of your team members!
+      <p>Junior. 16 and 6-4.
       </p>
   </div>
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/wall_e.jfif">
-      <h4>Andy Yu</h4>
+  <div class="team_member" onmouseover="swapImage(this, 'img/andy2.jpeg')" onmouseout="swapImage(this, 'img/andy.jpg')">
+      <img src="img/andy.jpg"/>
+      <h4 style="padding-top: 5%">Andy</h4>
+      <h4>Yu</h4>
       <p>andyy455@mit.edu</p>
-      <p>Short boy.
+      <p>6-2 on paper, 5'5" in reality. Sophomore.
       </p>
   </div>
-  <div class="w3-card team_member">
-      <img class="headshot" src="img/r2.jpg">
-      <h4>Amina Luvsanchultem</h4>
+  <div class="team_member">
+      <img src="img/amina.jpeg">
+      <h4 style="padding-top: 5%">Amina</h4>
+      <h4>Luvsanchultem</h4>
       <p>aminaluv@mit.edu</p>
-      <p>These are some template bios; fill this in for each of your team members!
+      <p>Junior. 6-4.
       </p>
   </div>
+  <div class="team_member">
+    <img src="img/arthur.jpg">
+    <h4 style="padding-top: 5%">Arthur</h4>
+    <h4>Hu</h4>
+    <p>arthu@mit.edu</p>
+    <p>Junior. 2 and 6-3.
+    </p>
 </div>
-
-<!-- Contact Section -->
-<div class="w3-container w3-grey" style="padding:5% 5%;text-align:center;" id="about">
-  <div class="w3-card w3-white" style="width:100%">
-    <h1>About Us</h1>
-  </div>
-  <div class="w3-cell w3-red" style="width:30%;float:left;min-height: 200px;">
-      <i class="fa fa-folder"></i> <!--Put an image here or something?-->
-      <p>Do something that is unique here. (You can change this to team values or something?)</p>
-  </div>
-  <div class="w3-cell w3-white" style="width:30%;margin-left:5%;float:left;min-height: 200px;">
-      <i class="fa fa-folder"></i><!--Put an image here or something?-->
-      <p>The TAs are not that unique, so we are just writing a lot of filler things here so we look cool.</p>
-  </div>
-  <div class="w3-cell w3-blue" style="width:30%;margin-left:5%;float:left;min-height: 200px;">
-      <i class="fa fa-folder"></i><!--Put an image here or something?-->
-      <p>Si vos es pulchellus frigus hanc: et admonitus in hoc genere digna est. It tristis et non dederint tibi. Benediximus</p>
-  </div>
 </div>
+<!-- End of team members -->
 
+<!-- About us -->
+<div class="about" id="about">
+  <h1>About Us</h1>
+  <p>
+    In the spring of 2025, a bunch of chill guys and girls enrolled in 6.4200: Robotics Science and Systems.
+  </p>
+  <p>
+    We all found ourselves in Team 12, tasked with programming a robot car in ROS2 Humble.
+    We were assigned labs, which required the car to perform various tasks autonomously.
+    We grinded through every lab, learning about robotics, communication, and teamwork along the way.
+  </p>
+  <p>
+    Inspired by the instructions "Hold left bumper (RB)", we named our car RuBy.
+  </p>
+</div>
+<!-- End of about us -->
 
+<!-- Repeated footer on each page-->
+<footer>
+  <div class="buttons">
+    <button onclick="location.href='#home'"><i class="fa fa-arrow-up" style="margin-right: clamp(0px, 3.5vw, 15px)"></i>To the top</button>
+  </div>
+  <p>Ruby logo by Yukihiro Matsumoto and the Ruby Visual Identity Team, used under CC BY-SA 2.5.</p>
+</footer>
+<!-- Repeated footer on each page-->
 </body>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
-
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
-
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
-
+<script src="main.js"></script>
+<script src="interactive.js"></script>
 </html>
