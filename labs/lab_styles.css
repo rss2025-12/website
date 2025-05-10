@@ -175,7 +175,7 @@ body, html {
 }
 .lab-content iframe {
   padding: 0;
-  margin: 2% 0;
+  margin: 2% 0 1.5% 0;
   border: 0;
   border-radius: 2vw;
   width: 80%;
@@ -193,6 +193,13 @@ body, html {
 .lab-content a:hover {
   font-weight: bold;
   text-decoration: underline;
+}
+.lab-content video {
+  padding: 0;
+  border-radius: 2vw;
+  margin: 2% 0;
+  margin-bottom: 0;
+  width: 80%;
 }
 
 /* Repeated footer on each page */
